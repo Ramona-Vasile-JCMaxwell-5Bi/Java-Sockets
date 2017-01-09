@@ -59,6 +59,7 @@ public class ClientTesto {
 		out.println(userInput);
                 System.out.println("Messaggio spedito al server: " + userInput);
                 System.out.print(">"); //visualizza il prompt
+                //ciao
             }
             // chiusura socket
             clientSocket.close();
