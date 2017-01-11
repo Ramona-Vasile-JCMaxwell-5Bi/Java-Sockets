@@ -1,4 +1,4 @@
-
+test documetazione 
 # Java-Sockets
 Concetti e realizzazione di una semplice connessione Client/Server usando Sockets in Java
 ```
@@ -74,3 +74,6 @@ opensource nel modo piu' completo del termine :) senza alcuna restrizione!
 
 ## Ringraziamenti
 a mia moglie che mi ha permesso di trovare il tempo per questo progetto guardando il bambino ;)
+
+## Autori
+mpalitto
