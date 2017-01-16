@@ -6,12 +6,14 @@
 import java.net.*;
 import java.io.*;
 
-/**
- *
- * @author Prof. Matteo Palitto
- */
+//Dichiarazione delle librerie con asterisco per averle tutte
+
+import java.util.*;
+
 class SocketWorker implements Runnable {
   private Socket client;
+  private Socket client;
+  String nickname;
 
     //Constructor: inizializza le variabili
     SocketWorker(Socket client) {
@@ -35,6 +37,26 @@ class SocketWorker implements Runnable {
 
         String line = "";
         int clientPort = client.getPort(); //il "nome" del mittente (client)
+      
+      //Stampa uteni connessi, con il commando "ListaUtenti" 
+      nickname = in.readLine();
+      ServerTestoMultiThreaded.nicks.add(nickname);
+      
+      if(line.equals("ListaUtenti"))
+      {
+      for(int i = 0; i < ServerTestoMultiThreaded.nicks.size(); i++){ 
+      System.out.println((String) ServerTestoMultiThreaded.nicks.get(i));
+      }
+      }
+      else{ 
+      //Aggiunge "nome" del client
+      out.println(nickname + ">> " + line);
+      
+      //Stampa del messaggio
+      System.out.println(nickname + ">> " + line);
+      }
+      
+      
         while(line != null){
           try{
             line = in.readLine();
