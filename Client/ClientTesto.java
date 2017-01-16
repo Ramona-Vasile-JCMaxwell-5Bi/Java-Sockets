@@ -25,6 +25,17 @@ public class ClientTesto {
             return;
         }
 		
+	 //aggiunta per nickname   
+	    String nickname = null;
++        try{
++            System.out.println("Inserisci il nickname");
++            nickname = (new BufferedReader(new InputStreamReader(System.in))).readLine();
++        } catch(IOException e) 
++            { System.out.println("I/O Error");
++                                 System.exit(-1); } 
+	    
+	    //fine aggiunta nickaname
+	    
 	String hostName = args[0];
 	int portNumber = Integer.parseInt(args[1]);
 	try {
